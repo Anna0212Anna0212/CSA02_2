@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace CSA02_2
                     for (int i = 0; i < n; i++)
                     {
                         Console.Write("輸入第" + (i + 1) + "個數字：");
-                        if (int.TryParse(Console.ReadLine(), out int number))
+                        if (int.TryParse(Console.ReadLine(), out int number) && number <= 100 && number > 0)
                         {
                             numbers[i] = number;
                         }
@@ -62,7 +63,7 @@ namespace CSA02_2
                                     Console.ForegroundColor = ConsoleColor.Blue;
                                 }
                                 Console.Write(i + " ");
-                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.ResetColor();
                             }
                         }
                     }
